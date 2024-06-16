@@ -12,7 +12,7 @@ pipeline {
     }
     environment{
         def appVersion = '' //variable declaration
-        nexusUrl = 'nexus.siri.online:8081'
+        nexusUrl = 'nexus.sireesha.online:8081'
     }
     stages {
         stage('print the version'){
