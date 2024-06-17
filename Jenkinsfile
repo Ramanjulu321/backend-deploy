@@ -11,7 +11,7 @@ pipeline {
         string(name: 'appVersion', defaultValue: '1.0.0', description: 'What is the application version?')
     }
     environment{
-        def appVersion = '' //variable declaration
+        def appVersion = 'app_version' //variable declaration
         nexusUrl = 'nexus.Sireesha.online:8081'
     }
     stages {
