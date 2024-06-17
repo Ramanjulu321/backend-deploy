@@ -27,7 +27,7 @@ pipeline {
                 sh """
                     pwd
                     cd terraform
-                    terraform init
+                    terraform init -migrate-state
                 """
             }
         }
