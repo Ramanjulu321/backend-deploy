@@ -1,16 +1,24 @@
 variable "project_name" {
-    default = "expense"
+  default = "expense"
 }
 
 variable "environment" {
-    default = "dev"
+  default = "dev"
 }
 
 variable "common_tags" {
-    default = {
-        Project = "expense"
-        Environment = "dev"
-        Terraform = "true"
-        Component = "backend"
-    }
+  default = {
+    Project = "expense"
+    Environment = "dev"
+    Terraform = "true"
+    Component = "backend"
+  }
+}
+
+variable "zone_name" {
+  default = "sireesha.online"
+}
+
+variable "app_version" {
+  
 }
