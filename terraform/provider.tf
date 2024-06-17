@@ -9,7 +9,7 @@ terraform {
     bucket = "siri-remote-state"
     key    = "expense-dev-backend"
     region = "us-east-1"
-    dynamodb_table = "siri-locking"
+    dynamodb_table = "siri-78s-locking"
   }
 }
 
