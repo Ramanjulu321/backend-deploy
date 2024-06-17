@@ -11,8 +11,8 @@ pipeline {
         string(name: 'appVersion', defaultValue: '1.0.0', description: 'What is the application version?')
     }
     environment{
-        def appVersion = 'app_version' //variable declaration
-        nexusUrl = 'nexus.Sireesha.online:8081'
+        def appVersion = '' //variable declaration
+        nexusUrl = 'nexus.sireesha.online:8081'
     }
     stages {
         stage('print the version'){
@@ -26,7 +26,7 @@ pipeline {
             steps{
                 sh """
                     cd terraform
-                    terraform init -migrate-state
+                    terraform init
                 """
             }
         }
@@ -52,7 +52,7 @@ pipeline {
     post { 
         always { 
             echo 'I will always say Hello again!'
-            // deleteDir()
+            deleteDir()
         }
         success { 
             echo 'I will run when pipeline is success'
