@@ -12,7 +12,7 @@ pipeline {
     }
     environment{
         def appVersion = '' //variable declaration
-        nexusUrl = 'nexus.sireesha.online:8081'
+        nexusUrl = 'nexus.daws78s.online:8081'
     }
     stages {
         stage('print the version'){
@@ -25,7 +25,6 @@ pipeline {
         stage('Init'){
             steps{
                 sh """
-                    pwd
                     cd terraform
                     terraform init -migrate-state
                 """
@@ -53,7 +52,7 @@ pipeline {
     post { 
         always { 
             echo 'I will always say Hello again!'
-            // deleteDir()
+            deleteDir()
         }
         success { 
             echo 'I will run when pipeline is success'
