@@ -16,7 +16,7 @@ variable "common_tags" {
 }
 
 variable "zone_name" {
-  default = "sireesha.online"
+  default = "daws-78s.store"
 }
 
 variable "app_version" {

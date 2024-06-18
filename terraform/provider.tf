@@ -6,10 +6,10 @@ terraform {
     }
   }
   backend "s3" {
-    bucket = "siri-remote-state"
+    bucket = "ramu-remote-state"
     key    = "expense-dev-backend"
     region = "us-east-1"
-    dynamodb_table = "siri-locking"
+    dynamodb_table = "daws-78s-locking"
   }
 }
 
